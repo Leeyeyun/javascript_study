@@ -1,0 +1,17 @@
+main {
+    max-width:800px;
+    margin:30px auto 0; padding:50px 0;
+    text-align:center;
+    border-radius:20px;
+    background:#ffe81a48;
+}
+main h1 {
+    font-size:1.65rem; font-weight:700;
+}
+main p {}
+main ul {}
+main ul li {}
+main ul li #height {}
+main ul li #weight {}
+main ul li #goals {}
+main #result {}
