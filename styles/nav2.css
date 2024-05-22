@@ -1,0 +1,54 @@
+header {
+    height:100px; padding:0 40px;
+    display:flex; align-items:center;
+    justify-content:space-between;
+}
+header h1 {}
+header h1 a {}
+header h1 a img {}
+header nav {}
+header nav .gnb {
+    display:flex;
+}
+header nav .gnb > li {
+    width:200px;
+    position:relative;
+}
+header nav .gnb > li > a {
+    display:block; line-height:40px;
+    text-transform:uppercase;
+}
+header nav .gnb > li > .sub {
+    position:absolute; left:0; top:40px;
+    background-color:#fff;
+    width:100%;/* 부모의 넓이만큼, absolute 지정하면 인라인으로 인식 */
+    height:320px; padding:10px 0;
+}
+/* 메뉴 사이 구분선 */
+header nav .gnb > li > .sub::after {
+    content:''; display:block;
+    width:1px; height:300px; background-color:#d5d5d5;
+    position:absolute; right:5px; top:10px;
+}
+header nav .gnb > li:last-child > .sub::after {display:none;}
+header nav .gnb > li > .sub li {}
+header nav .gnb > li > .sub li a {
+    display:block; line-height:50px; padding-left:10px;
+}
+main {}
+main .visual {
+    height:calc(100vh - 100px);
+    background-position:center;
+    background-image:url(https://images.unsplash.com/photo-1575516478880-7dfb1a114073?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+main .visual h1 {
+    padding-top:300px;
+    text-align:center; color:#fff;
+    font-size:3.25rem; font-weight:700;
+    text-shadow:0 0 50px rgba(0,0,0,0.5);
+}
+main .visual h1 span {
+    display:inline-block;
+    font-size:4rem; margin:10px 0;
+    text-transform:uppercase;
+}
