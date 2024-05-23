@@ -1,0 +1,52 @@
+header {}
+main {width:1000px; margin:100px auto;}
+main h1 {
+    font-size:2rem; letter-spacing:-2px;
+    text-align:center; margin:50px 0 70px; font-weight:500; padding-top:20px;
+}
+main .cart_wrap {
+}
+main .cart_wrap .top {padding:20px 16px; border-bottom:1px solid #000;}
+main .cart_wrap .top input[name^=all] {}
+main .cart_wrap .top input[name^=all]:checked + label {}
+main .cart_wrap .top label {}
+main .cart_wrap .top label .select_num {}
+main .cart_wrap .top label .total_num {}
+main .cart_wrap .top .select_delete::before {
+    content:''; display:inline-block;
+    width:1px; height:15px; background-color:#C0C0C0;
+    margin:0 10px; transform:translateY(2px);
+}
+main .cart_wrap .top .select_delete {}
+/* e:top */
+/* item 시작 */
+main .cart_wrap .item_wrap {}
+main .cart_wrap .item_wrap .item {display:flex; align-items:center; padding:20px 16px; justify-content:space-between;}
+main .cart_wrap .item_wrap .item .select {}
+main .cart_wrap .item_wrap .item .select #item_select {}
+main .cart_wrap .item_wrap .item .photo {
+    width:60px; height:75px; background-color:#aaa;
+    margin:0 -120px 0 -130px;
+}
+main .cart_wrap .item_wrap .item .photo img {}
+main .cart_wrap .item_wrap .item a * {line-height:30px;}
+main .cart_wrap .item_wrap .item a h2 {font-size:1.125rem; font-weight:500;}
+main .cart_wrap .item_wrap .item a .detail {font-size:0.875rem; color:#aaa;}
+main .cart_wrap .item_wrap .item .num_select * {
+    width:25px; border:0; position:relative; bottom:3px;
+}
+main .cart_wrap .item_wrap .item .num_select {
+    margin-right:-60px; border:1px solid #aaa; padding:5px; border-radius:5px;
+}
+main .cart_wrap .item_wrap .item .num_select #num_minus {font-size:1.5rem; font-weight:700; background-color:#fff;}
+main .cart_wrap .item_wrap .item .num_select input[name=count] {text-align:center;}
+main .cart_wrap .item_wrap .item .num_select #num_plus {font-size:1.35rem; font-weight:700; background-color:#fff;}
+main .cart_wrap .item_wrap .item .price_wrap {margin-right:-120px;}
+main .cart_wrap .item_wrap .item .price_wrap * {line-height:30px;}
+main .cart_wrap .item_wrap .item .price_wrap .total_price {}
+main .cart_wrap .item_wrap .item .price_wrap .original_price {}
+main .cart_wrap .item_wrap .item .price_wrap .original_price del {color:#C0C0C0; text-decoration:line-through;}
+main .cart_wrap .item_wrap .item .item_delete {
+    font-size:1.25rem; color:#aaa;
+    padding:30px 16px;
+}

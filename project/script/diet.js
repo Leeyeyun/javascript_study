@@ -6,13 +6,17 @@
 */
 const height = document.querySelector("#height")
 const weight = document.querySelector("#weight")
-const goals = document.querySelector("#goals")
-const btn = document.querySelector("button")
+/* const goals = document.querySelector("#goals") */
+const btn = document.querySelector("#result")
 console.log(height, weight, btn)
-btn.addEventListener('click',goal_func)
-function goal_func(){
+btn.addEventListener('click',function(){
     let user_h = Number(height.value)
     let user_w = Number(weight.value)
     let calc = (user_h - 100) * 0.9
-    goals.value = `적정체중은 ${calc}kg이며, ${user_w - calc}kg 초과되셨습니다. 노력하세요.`
-}
+    let message = `너에게 완벽한 체중은
+${calc}kg 이야.
+${user_w - calc}kg 이나 초과했네?
+오늘 야식은 금지다.`;
+    document.getElementById('goals').value = message;
+    console.log(message);
+})
