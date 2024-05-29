@@ -1,0 +1,15 @@
+body {width:542px; margin:50px auto; text-align:center;}
+#login {border:1px solid #aaa; padding:20px;}
+#login ul {}
+#login ul li {}
+#login .error {}
+#login .btn {}
+#login .btn #login_btn {}
+
+/* js 호출용 design class */
+.no_input {
+    color:green; font-weight:700;
+}
+.error_input {
+    color:red; font-weight:900;
+}
