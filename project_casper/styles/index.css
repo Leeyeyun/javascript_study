@@ -1,0 +1,25 @@
+header {
+    height:70px; background-color:aqua; padding:0 30px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+header h1 {padding-left:8px;}
+header h1 a {width:148px;}
+header h1 a img {width:100%;}
+/* header-nav design */
+header nav {}
+header nav .gnb {display:flex; justify-content:flex-start; align-items:center;}
+header nav .gnb li {margin-right:130px; position:relative;}
+header nav .gnb li:last-child {margin-right:0;}
+header nav .gnb li > a {font-size:1.25rem; font-weight:700;}
+/* sub 정렬 */
+header nav .gnb li .sub {position:absolute; left:0; top:25px;}
+header nav .gnb li .sub li {width:100%; border:1px solid pink;}
+header nav .gnb li .sub li > a {font-size:1.188rem; font-weight:400; line-height:40px;}
+header nav .gnb li .sub:last-child {display:flex; flex-flow:column nowrap; justify-content:center;}
+header nav .gnb li:last-child .sub {margin-top:12px;}
+header nav .gnb li:last-child .sub li {width:218px; background-color:coral;}
+header nav .gnb li:last-child .sub li a img {width:100%;/* margin-top:12px; */}
+/* header-right */
+header .right {}
+header .right a {}
+header .right a img {width:36px;}
