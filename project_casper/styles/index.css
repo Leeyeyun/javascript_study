@@ -109,3 +109,37 @@ main .airbag {text-align:center; padding:100px 0; background-color:#f5f5f5;}
 main .airbag h2 {}
 main .airbag p {}
 main .airbag video {width:808px;}
+/*----------------- 6. main-trim -----------------*/
+main .trim {
+    height:max-content; background-color:#fff; padding:100px 30px;
+}
+main .trim .title {}
+main .trim .title span {}
+main .trim .sub_title {}
+main .trim a {padding:10px 20px; background-color:#008fbd; color:#fff; font-weight:500; display:inline-block;}
+main .trim .trim_contents_wrap {
+    padding:50px 106px 0;
+    display:flex; justify-content:space-between;
+}
+main .trim .trim_contents_wrap .trim_contents {text-align:center;}
+main .trim .trim_contents_wrap .trim_contents p {}
+/* trim 이미지&폰트 공통 디자인 */
+main .trim .trim_contents_wrap .trim_contents p img {width:252px;}
+main .trim .trim_contents_wrap .trim_contents h3 {font-size:1.25rem; font-weight:500; color:#008fbd; margin-top:11px;}
+main .trim .trim_contents_wrap .trim_contents p:nth-child(3) {line-height:1.2; margin:9px 0;}
+main .trim .trim_contents_wrap .trim_contents p:last-child {}
+main .trim .trim_contents_wrap .trim_contents p:last-child span {font-size:1.25rem; font-weight:500;}
+/* e:main */
+/*---------------------------- footer 시작 ----------------------------*/
+footer {
+    background-color: #002C5F; padding:50px 30px;
+    display:flex;
+}
+footer p {font-size:0.938rem; color:#fff; letter-spacing:-0.2px; line-height:2.0;}
+footer h1 {margin-right:50px;}
+footer .address_left {}
+footer .address_left a {font-size:0.938rem; color:#fff; letter-spacing:-0.2px; text-decoration: underline;}
+footer .address_wrap {
+    display:flex;
+}
+footer .address_wrap .address_left {margin-right:370px;}
