@@ -1,25 +1,111 @@
+/* title, subtitle 공통 폰트디자인 */
+main .title {font-size:2.5rem; letter-spacing:0.2px; line-height:1.2; margin-bottom:3px;}
+main .title > span {font-weight:700;}
+main .sub_title {font-size:1.25rem; letter-spacing:0.2px; color:#8A8A8A; margin:20px 0;}
+/* header */
 header {
-    height:70px; background-color:aqua; padding:0 30px;
+    width:100%;
+    height:70px; background-color:#fff; padding:0 30px;
     display:flex; justify-content:space-between; align-items:center;
+    position:fixed; left:0; top:0; z-index:5;
 }
-header h1 {padding-left:8px;}
-header h1 a {width:148px;}
+header h1 {}
+header h1 a {width:118px;}
 header h1 a img {width:100%;}
 /* header-nav design */
 header nav {}
 header nav .gnb {display:flex; justify-content:flex-start; align-items:center;}
-header nav .gnb li {margin-right:130px; position:relative;}
+header nav .gnb li {margin-right:101px; position:relative;}
 header nav .gnb li:last-child {margin-right:0;}
-header nav .gnb li > a {font-size:1.25rem; font-weight:700;}
+header nav .gnb li > a {font-weight:700;}
 /* sub 정렬 */
-header nav .gnb li .sub {position:absolute; left:0; top:25px;}
-header nav .gnb li .sub li {width:100%; border:1px solid pink;}
-header nav .gnb li .sub li > a {font-size:1.188rem; font-weight:400; line-height:40px;}
-header nav .gnb li .sub:last-child {display:flex; flex-flow:column nowrap; justify-content:center;}
-header nav .gnb li:last-child .sub {margin-top:12px;}
-header nav .gnb li:last-child .sub li {width:218px; background-color:coral;}
-header nav .gnb li:last-child .sub li a img {width:100%;/* margin-top:12px; */}
+header nav .gnb li .sub {position:absolute; left:0; top:32px; display:none; /* none적용하기 */}
+header nav .gnb li .sub li {width:100%; /* border:1px solid pink; */ margin-bottom:11px;}
+header nav .gnb li .sub li > a {font-size:0.938rem; font-weight:400; letter-spacing:-0.2px; border:1px solid red;}
+header nav .gnb li .sub:last-child {display:flex; flex-flow:column nowrap; justify-content:center; display:none; /* none적용하기 */}
+header nav .gnb li:last-child .sub li {width:170px;}
+header nav .gnb li:last-child .sub li a img {width:100%;}
 /* header-right */
-header .right {}
+header .right {margin-left:97px;}
 header .right a {}
-header .right a img {width:36px;}
+header .right a img {width:29px; margin-left:3px;}
+/* e:header */
+/*---------------------------- main 시작 ----------------------------*/
+/*----------------- 1. main-top -----------------*/
+main {}
+main .top {position:relative; height:100vh;}
+main .top p {}
+main .top > p > img {width:100%; position:fixed; z-index:-5;}
+main .top .top_contents {
+    width:100%;
+    position:absolute; text-align:center; top:115px;
+}
+main .top .top_contents * {margin:0 auto;}
+main .top .top_contents h1 {font-size:5rem; font-weight:800; color:#fff; letter-spacing:-0.2px; margin-bottom:30px;}
+main .top .top_contents p:nth-child(2) {font-size:1.25rem; font-weight:500; color:#fff; letter-spacing:-0.2px; margin-bottom:20px;}
+main .top .top_contents .catalog_download {margin-bottom:500px;}
+main .top .top_contents .catalog_download a {
+    font-weight:500;
+    background-color:#002C5F; color:#fff; padding:0 20px; line-height:36px; display:inline-block;
+}
+main .top .top_contents .catalog_download a:first-child {margin-right:3px;}
+/* mouse */
+main .top .top_contents p img {
+    width:48px; filter:invert(100%);
+    animation:flow 1s ease-in-out alternate infinite;
+}
+/* mouse animation */
+@keyframes flow {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-20px);}
+}
+/* e:main-top */
+/*----------------- 2. main-highlights -----------------*/
+main .highlights {
+    padding:46px 30px; display:flex; justify-content:space-between;
+    width:100%; height:500px; background-color:#fff;
+}
+main .highlights .highlights_left {}
+main .highlights .highlights_right {
+    width:1355px; overflow:scroll;
+    display:flex; justify-content:space-between;
+}
+main .highlights .highlights_right .contents {margin-right:30px;}
+main .highlights .highlights_right .contents:last-child {}
+main .highlights .highlights_right .contents .image {}
+main .highlights .highlights_right .contents .image img {width:464px;}
+main .highlights .highlights_right .contents p:last-child {line-height:1.5; letter-spacing:0.2px;}
+main .highlights .highlights_right .contents p:last-child span {font-size:1.313rem; color:#002C5F;}
+main .highlights .highlights_right .contents p:last-child em {background-color:#002C5F; margin-left:5px; padding:2px 7px; color:#fff; font-weight:500; font-size:0.875rem;}
+/*----------------- 3. main-design -----------------*/
+main .design {background-color:#fff; text-align:center; padding-top:150px;}
+main .design > p {font-size:15.5rem; font-weight:900; letter-spacing:-0.2px; color:#ddd;}
+main .design > p:last-child {position:relative; bottom:118px;}
+main .design > p img {}
+/*----------------- 4. main-color -----------------*/
+main .color {height:709px; background-color:white; position:relative;}
+main .color .color_txt {
+    background-color:#333;
+    /* height:328px; */ padding:70px 30px;
+}
+main .color .color_txt .title {color:#fff; margin-bottom:8px;}
+main .color .color_txt .title span {}
+main .color .color_txt .sub_title {}
+main .color .color_txt .colors {
+    display:flex; align-items:center;
+}
+main .color .color_txt .colors p {
+    width:32px; height:32px; border-radius:50%; background-color:#aaa;
+    margin-right:11px;
+}
+main .color .color_txt .colors p:first-child {background-color:#FFF;}
+main .color .color_txt .colors p:last-child {background-color:#888;}
+main .color > p {
+    position:absolute; right:0; top:225px; width:508px;
+}
+main .color > p img {width:100%;}
+/*----------------- 5. main-airbag -----------------*/
+main .airbag {text-align:center; padding:100px 0; background-color:#f5f5f5;}
+main .airbag h2 {}
+main .airbag p {}
+main .airbag video {width:808px;}
