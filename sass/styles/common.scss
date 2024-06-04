@@ -1,0 +1,15 @@
+$bg-color:#eee;
+$bg-color2:rgba(0,255,0,0.5);
+$font-color:rgb(255,0,0);
+$br1:2px;
+$br-m:dashed;
+$margin:0 auto;
+@mixin flex-r {
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:center;
+    border:2px solid $font-color;
+}
+@mixin flex-c {
+    display:flex; flex-flow:column nowrap;
+    justify-content:space-between; align-items:center;
+}
