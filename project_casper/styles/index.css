@@ -25,10 +25,11 @@ header nav .gnb li .sub li > a {font-size:0.938rem; font-weight:400; letter-spac
 header nav .gnb li .sub:last-child {display:flex; flex-flow:column nowrap; justify-content:center; display:none; /* none적용하기 */}
 header nav .gnb li:last-child .sub li {width:170px;}
 header nav .gnb li:last-child .sub li a img {width:100%;}
-/* header-right */
-header .right {margin-left:97px;}
-header .right a {}
-header .right a img {width:29px; margin-left:3px;}
+/* header-lnb */
+header .lnb {display:flex;}
+header .lnb .m_nav {display:none;}
+header .lnb a {}
+header .lnb a img {width:29px; margin-left:3px;}
 /* e:header */
 /*---------------------------- main 시작 ----------------------------*/
 /*----------------- 1. main-top -----------------*/
