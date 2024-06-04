@@ -1,0 +1,167 @@
+@import 'common';
+// common.scss 변수 및 mixin 이용해서 중첩 선택자 규칙으로 디자인만들기
+//------------------------ header ------------------------//
+header {
+    h1 {a {img {}}}
+    height:70px; background-color:$white-color; padding:$padding;
+    @include pst-fixed; width:$width-full; z-index:999;
+    @include display;
+    > nav {
+        .sub_bg {
+            width:$width-full; height:220px; @include pst_absolute; z-index:-5; top:70px;
+            background-color:$white-color;
+        }
+        .gnb {
+            display:$display-f;
+            > li {
+                font-weight:$bold; margin-right:100px;
+                position:relative;
+                :last-child {margin-right:0;}
+                > a {font-weight:$bold;}
+                > .sub {
+                    width:$width-full;
+                    @include pst_absolute; top:36px;
+                    li {
+                        a {
+                            font-size:0.938rem; white-space:nowrap;
+                            display:$display-b;
+                            line-height:30px;
+                            img {width:170px;}
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .lnb {
+        display:$display-f;
+        .m_nav {
+            display:$display-n;// 모바일메뉴 숨기기
+            .all_nav {
+                display:$display-b; width:24px; height:24px;
+                img {width:$width-full;}
+            }
+            //모바일 전용 내비게이션(m_nav 자식 nav)
+            nav {
+                display:none; //초기 숨기기(이후 JS 처리)
+                z-index:900;
+                padding-top:16px;
+                @include side_pst;
+                width:500px; height:calc(100vh - 70px);
+                background-color:$white-color;
+                .sub_bg {}
+                .gnb {
+                    width:500px;
+                    > li {
+                        > a {
+                            font-weight:700;
+                            display:block;
+                            border-bottom:1px solid #aaa;
+                            margin:0 14px;
+                            line-height:42px;
+                        }
+                        > .sub {
+                            /* display:$display-n; */
+                            li {
+                                a {
+                                    font-size:0.938rem;
+                                    display:$display-b; line-height:45px;
+                                    border-bottom:1px dashed #ddd;
+                                    margin:0 20px;
+                                    img {width:50%;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .my_menu {}
+        .notice {background-position-x:right;}
+        > a {
+            background-image:url(../images/ico_header.png);
+            background-repeat:no-repeat;
+            width:20px; height:25px; margin-left:12px;
+            span {display:$display-n;}
+        }
+    }
+}
+//------------------------ main ------------------------//
+main {
+    margin-top:70px;
+    //---------- main .visual
+    .visual {
+        background-image:url(../images/visual.png);
+        background-position:center;
+        background-size:cover;
+        height:calc(100vh - 70px);
+        .txt {
+            padding-top:50px; text-align:$txt-c;
+            h1 {
+                font-size:5rem; font-weight:800; color:$white-color; letter-spacing:-0.2px; margin-bottom:30px;
+            }
+            p {
+                font-size:1.25rem; font-weight:$medium; color:$white-color; letter-spacing:-0.2px; margin-bottom:20px;
+            }
+            .link {
+                a {
+                    font-weight:$medium;
+                    background-color:$main-color; color:#fff; padding:0 20px; line-height:36px; display:inline-block;
+                }
+            }
+            .scroll {
+                text-align:$txt-c;
+                position:absolute; width:$width-full; bottom:50px;
+                img {
+                    width:50px; filter:invert(1);
+                    animation:move 0.8s ease-in-out alternate infinite;
+                }
+            }
+        }
+    }//e:visual
+    //---------- main .advantage
+    .advantage {
+        background-color:$white-color;
+        padding:46px 30px;
+        @include display;
+        .title {
+            align-self:flex-start;
+            h1 {@include title;
+                em{font-weight:$bold}
+            }
+            p {@include sub_title;}
+        }
+        .contents {
+            @include display; overflow-x:auto; overflow-y:hidden;
+            width:calc(100% - 500px); height:max-content;
+            a {
+                margin:0 30px 30px 0;
+                .photo {img{}}
+                .photo+p {
+                    margin:8px 0 10px;
+                }
+                h2 {
+                    font-size:1.313rem; font-weight:$medium; color:$main-color;
+                    em{
+                        display:inline-block;
+                        font-size:0.938rem; font-weight:$medium; color:$white-color;
+                        padding:0 7px; line-height:30px; background-color:$main-color; margin-left:6px;
+                    }
+                }
+            }
+        }
+    }//e:advantage
+    //---------- main .design
+    .design {
+        padding:100px 30px; position:relative; padding-top:190px;
+        h1 {
+            font-size:15rem; font-weight:900; color:#ddd;
+            @include pst_absolute; text-align:$txt-c;
+            z-index:-1; top:100px;
+        }
+        .photo {text-align:$txt-c;
+            img {}
+        }
+    }//e:design
+}

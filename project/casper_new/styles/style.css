@@ -49,22 +49,31 @@ header .lnb .m_nav .all_nav {
 header .lnb .m_nav .all_nav img {width:100%;}
 /* ===================header 모바일 nav clone 디자인 */
 header .lnb .m_nav nav {
-    /* display:none; */ background-color:coral;
-    width:50vw;
+    /* display:none; */
 }
 header .lnb .m_nav nav .sub_bg {
     position:absolute; right:0; top:70px;
-    width:50vw; height:100vh;
+    width:500px; height:100vh;
     background-color:#fff;
 }
 header .lnb .m_nav nav .gnb {
-    background-color:cornflowerblue; width:50vw;
+    padding-top:20px;
+    width:calc(500px - 28px);
     position:absolute; right:0; top:70px;
+    margin:0 14px;
 }
 header .lnb .m_nav nav .gnb > li {}
-header .lnb .m_nav nav .gnb > li > .sub {}
+header .lnb .m_nav nav .gnb > li > a {
+    line-height:37px;
+    font-weight:700; display:block;
+    border-bottom:1px solid #aaa;
+}
+header .lnb .m_nav nav .gnb > li > .sub {display:none;}
 header .lnb .m_nav nav .gnb > li > .sub li {}
-header .lnb .m_nav nav .gnb > li > .sub li a {}
+header .lnb .m_nav nav .gnb > li > .sub li a {
+    display:block; line-height:50px;
+    border-bottom:1px dashed #ddd;
+}
 /* ===================header lnb */
 header .lnb .my_menu {}
 header .lnb .notice {background-position-x:right;}
