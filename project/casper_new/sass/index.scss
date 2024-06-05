@@ -19,8 +19,8 @@ header {
                 :last-child {margin-right:0;}
                 > a {font-weight:$bold;}
                 > .sub {
-                    width:$width-full;
                     @include pst_absolute; top:36px;
+                    width:max-content;
                     li {
                         a {
                             font-size:0.938rem; white-space:nowrap;
