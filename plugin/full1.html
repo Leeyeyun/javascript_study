@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full-1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- fullpage 플러그인(구) 제이쿼리 라이브러리 연결 필수!!! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- fullpage 플러그인(구) 연결 필수!!! -->
+    <link rel="stylesheet" href="./styles/jquery.fullPage.css">
+    <script src="./script/jquery.fullPage.js"></script>
+    <style>
+        #wrap .s1 {background:yellow;}
+        #wrap .s2 {background:aqua;}
+        #wrap .s3 {background:blue;}
+        #wrap .s4 {background:pink;}
+    </style>
+</head>
+<body>
+    <!-- fullpage 태그 규칙 지키기! -->
+    <div id="wrap"><!-- 부모 이름 자유 -->
+        <div class="section s1">1</div><!-- section 클래스명 필수 -->
+        <div class="section s2">2</div><!-- 추가 클래스 자유 -->
+        <div class="section s3"><h1>3</h1></div><!-- 자식, 자손 태그 자유 -->
+        <div class="section s4">4</div>
+    </div>
+    <script>
+        // fullpage js 플러그인 연결 필수!
+        $('#wrap').fullpage({
+            scrollBar:true,
+            scrollingSpeed:500,
+        })
+    </script>
+</body>
+</html>
